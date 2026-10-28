@@ -16,7 +16,7 @@ def save_tasks(task_name, task_time):
     with open(file_path, "w", encoding="utf-8")as f:
         json.dump(tasks, f, ensure_ascii=False, indent=2)
 client = OpenAI(
-    api_key = "54062a9348f54864a5628daf55b6f76e.WAEKFAsmcFaeAnBX",
+    api_key=st.secrets["ZHIPU_API_KEY"],
     base_url = "https://open.bigmodel.cn/api/paas/v4/"
 )
 user_input = st.text_input("你想记录点什么", placeholder = "例如这周末要把思政作业交了")
